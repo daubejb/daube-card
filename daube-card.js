@@ -38,7 +38,28 @@ if (window.ShadyCSS) {
 }
 
 class DaubeCard extends HTMLElement {
-  static get observedAttributes() {}
+  static get observedAttributes() {
+    return ['cardcolor'];
+  }
+
+  get cardcolor() {
+    return this._cardcolor;
+  }
+
+  set cardcolor(v) {
+    if (this._cardcolor === v) return;
+    this._cardcolor = v;
+    this.setAttribute('cardcolor', v);
+  }
+
+  attributeChangedCallback (name, oldValue, newValue) {
+    const hasValue = newValue !== null;
+    switch (name) {
+      case 'cardcolor':
+      this.processCardColor();
+      break;
+    }
+  }
   constructor() {
     super();
 
@@ -50,5 +71,20 @@ class DaubeCard extends HTMLElement {
       ShadyCSS.styleElement(this);
     }
   }
+
+  processCardColor() {
+    var daubeCard = this.getCard();
+
+    if (this.hasAttribute('cardcolor')) {
+      daubeCard.style.backgroundColor = this.getAttribute('cardcolor');
+    } else {
+      daubeCard.style.removeProperty('background-color');
+    }
+  }
+
+  getCard() {
+    return this.shadowRoot.querySelector('.daubecard');
+  }
+
 } // Class CustomElement
 customElements.define("daube-card", DaubeCard);
