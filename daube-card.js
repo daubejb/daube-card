@@ -20,7 +20,7 @@ template.innerHTML = `
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
       border-radius: 3px;
-      padding: 1.25rem 2rem 4rem 2rem;
+      padding: 1.25rem 2rem 1.25rem 2rem;
       margin: 0 auto;
       margin-top: 2rem;
       background-color: white;
