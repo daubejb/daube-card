@@ -1,6 +1,6 @@
 {
   "name": "daube-card",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A simple card --- material-influenced, vanilla js custom element.",
   "repository": {
     "type": "git",
