@@ -25,5 +25,8 @@ Include the <daube-card> custom element in the html page
 
 The following options are available within the daube-card tag:
 
+  1. cardcolor - ```cardcolor="rgba(255, 255, 255, 0.81)"```
+    - hexcodes OR rgb OR rgba
+
 
 
