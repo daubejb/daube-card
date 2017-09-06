@@ -22,6 +22,7 @@ template.innerHTML = `
       border-radius: 3px;
       padding: 1.25rem 2rem 4rem 2rem;
       margin: 0 auto;
+      margin-top: 2rem;
       background-color: white;
     }
 
