@@ -29,7 +29,7 @@ template.innerHTML = `
   </style>
 
   <div class="daubecard">
-    <slot></slot>
+    <slot name="card"></slot>
   </div>
 `
 
